@@ -35,12 +35,27 @@
     cursor: pointer;
     transition: .3s ease background-color;
 }
-.tw-followCard-button.is-following{
-    border: 1px solid red;
-}
+
 .tw-followCard-button:hover{
     background-color: #09f;  
 }
 .tw-followCard-button.is-following:hover{
-    background-color: red;  
+    background-color: rgba(255, 0, 0, 0.247);  
+    color: red;
+}
+.tw-followCard-button.is-following{
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-unfollow{
+    display: block;
+}
+.tw-followCard-button.is-following:hover .tw-followCard-text{
+    display: none;
+}
+
+.tw-followCard-unfollow{
+    display: none;
 }

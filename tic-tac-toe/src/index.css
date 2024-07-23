@@ -1,0 +1,94 @@
+*{
+  color: white;
+  top: 0;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #252424;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  /* border: solid; */
+}
+
+main{
+  /* border: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.board .game{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.square{
+  border: solid;
+  width: 80px;
+  height: 80px;
+  border-color: brown;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  cursor: pointer;
+}
+.turn{
+  display: flex;
+}
+.turn .square{
+  /* display: flex; */
+  border-color: transparent;
+}
+.square.is-selected {
+  color: #fff;
+  background: #09f;
+}
+
+.winner{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* border: solid; */
+  background: rgba(0, 0, 0, 0.705);
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  place-content: center;
+}
+.text{
+  width: 200px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background: black;
+  border: solid 2px rgb(88, 42, 42);
+  border-radius: 10px;
+}
+.win{
+  /* border: solid; */
+  display: grid;
+  place-items: center;
+}
+.win:first-child{
+  border: none;
+}
+button{
+  background: rgb(155, 84, 84);
+  border: none;
+  cursor: pointer;
+  width: 70px;
+  height: auto;
+}
